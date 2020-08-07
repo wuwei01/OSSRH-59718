@@ -12,16 +12,16 @@ import lombok.Getter;
  * @Version 1.0
  **/
 @Getter
-public class APIException extends RuntimeException{
+public class ApiException extends RuntimeException{
     private int code;
     private String message;
 
-    public APIException(ResultCode resultCode){
+    public ApiException(ResultCode resultCode){
         this.code = resultCode.getCode();
         this.message = resultCode.getMessage();
     }
 
-    public APIException(int code, String message){
+    public ApiException(int code, String message){
         super(message);
         this.code = code;
         this.message = message;

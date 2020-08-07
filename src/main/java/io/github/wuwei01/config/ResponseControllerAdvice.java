@@ -3,7 +3,7 @@ package io.github.wuwei01.config;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.github.wuwei01.enums.ResultCode;
-import io.github.wuwei01.exception.APIException;
+import io.github.wuwei01.exception.ApiException;
 import io.github.wuwei01.vo.CommonResult;
 import org.springframework.core.MethodParameter;
 import org.springframework.http.MediaType;
@@ -37,7 +37,7 @@ public class ResponseControllerAdvice implements ResponseBodyAdvice {
                 // 将数据包装在CommonResult里后，再转换为json字符串响应给前端
                 return objectMapper.writeValueAsString(new CommonResult<>(data));
             } catch (JsonProcessingException e) {
-                throw new APIException(ResultCode.RESPONSE_ERROR);
+                throw new ApiException(ResultCode.RESPONSE_ERROR);
             }
         }
         // 将原本的数据包装在CommonResult里
