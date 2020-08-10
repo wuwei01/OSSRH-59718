@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 
 /**
- * @ClassName ResponseControllerAdvice
- * @Description 统一封装Response
- * @Author Wuwei
- * @Date 2020/8/5 14:21
- * @Version 1.0
+ * ClassName ResponseControllerAdvice
+ * Description 统一封装Response
+ * Author Wuwei
+ * Date 2020/8/5 14:21
+ * Version 1.0
  **/
 @RestControllerAdvice(basePackages = "${rep.repBasePackages}")
 public class ResponseControllerAdvice implements ResponseBodyAdvice {

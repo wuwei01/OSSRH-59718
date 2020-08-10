@@ -4,11 +4,11 @@ import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
 
 /**
- * @ClassName ResultCode
- * @Description 常用定义错误Code
- * @Author Wuwei
- * @Date 2020/8/5 14:09
- * @Version 1.0
+ * ClassName ResultCode
+ * Description 常用定义错误Code
+ * Author Wuwei
+ * Date 2020/8/5 14:09
+ * Version 1.0
  **/
 @Getter
 public enum ResultCode {

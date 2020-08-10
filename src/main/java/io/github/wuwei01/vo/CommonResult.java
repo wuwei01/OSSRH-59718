@@ -5,11 +5,11 @@ import lombok.Getter;
 
 
 /**
- * @ClassName CommonResult
- * @Description 消息返回VO
- * @Author Wuwei
- * @Date 2020/8/5 14:13
- * @Version 1.0
+ * ClassName CommonResult
+ * Description 消息返回VO
+ * Author Wuwei
+ * Date 2020/8/5 14:13
+ * Version 1.0
  **/
 @Getter
 public class CommonResult<T> {

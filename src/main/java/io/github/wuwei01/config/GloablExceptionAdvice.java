@@ -17,11 +17,11 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.servlet.NoHandlerFoundException;
 
 /**
- * @ClassName GloablExceptionAdvice
- * @Description 全局异常处理
- * @Author Wuwei
- * @Date 2020/8/5 15:07
- * @Version 1.0
+ * ClassName GloablExceptionAdvice
+ * Description 全局异常处理
+ * Author Wuwei
+ * Date 2020/8/5 15:07
+ * Version 1.0
  **/
 @Slf4j
 @RestControllerAdvice

@@ -5,11 +5,11 @@ import lombok.Getter;
 
 
 /**
- * @ClassName APIException
- * @Description TODO
- * @Author Wuwei
- * @Date 2020/8/5 14:16
- * @Version 1.0
+ * ClassName APIException
+ * Description TODO
+ * Author Wuwei
+ * Date 2020/8/5 14:16
+ * Version 1.0
  **/
 @Getter
 public class ApiException extends RuntimeException{
