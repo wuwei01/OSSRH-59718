@@ -24,7 +24,7 @@ public class ResponseControllerAdvice implements ResponseBodyAdvice {
 
     @Override
     public boolean supports(MethodParameter returnType, Class aClass) {
-        // 如果接口返回的类型本身就是ResultVO那就没有必要进行额外的操作，返回false
+        // 如果接口返回的类型本身就是CommonResult那就没有必要进行额外的操作，返回false
         return !returnType.getParameterType().equals(CommonResult.class);
     }
 
