@@ -1,7 +1,6 @@
 package io.github.wuwei01.enums;
 
 import lombok.Getter;
-import org.springframework.beans.factory.annotation.Value;
 
 /**
  * ClassName ResultCode
@@ -60,7 +59,12 @@ public enum ResultCode {
     /**
      * 4004表示接口不存在
      */
-    NOTFOUNDERROR(4004,"接口不存在"),
+    NOT_FOUND_ERROR(4004,"接口不存在"),
+
+    /**
+     * 4005表示接口请求方法错误
+     */
+    NOT_REQUEST_ERROR(4005,"接口请求方法错误"),
 
     /**
      * 5000表示接口调用未知错误

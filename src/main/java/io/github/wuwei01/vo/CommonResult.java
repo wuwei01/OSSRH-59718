@@ -35,4 +35,5 @@ public class CommonResult<T> {
         this.message = resultCode.getMessage();
         this.data = data;
     }
+
 }

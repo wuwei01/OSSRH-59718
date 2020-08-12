@@ -14,7 +14,7 @@ import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.servlet.NoHandlerFoundException;
+import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 /**
  * ClassName GloablExceptionAdvice
@@ -25,7 +25,8 @@ import org.springframework.web.servlet.NoHandlerFoundException;
  **/
 @Slf4j
 @RestControllerAdvice
-public class GloablExceptionAdvice {
+public class GloablExceptionAdvice extends ResponseEntityExceptionHandler {
+
     /**
      * 参数校验失败处理器
      * @param e 参数校验异常
@@ -74,7 +75,7 @@ public class GloablExceptionAdvice {
     }
 
     /**
-     * 方法错误异常处理器
+     * 405方法错误异常处理器
      *
      * @param e 忽略参数异常
      * @return CommonResult
@@ -82,19 +83,8 @@ public class GloablExceptionAdvice {
     @ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     public CommonResult<String> notSupportedExceptionHandler(HttpRequestMethodNotSupportedException e) {
-        return new CommonResult<>(ResultCode.ERROR, e.getMessage());
+        return new CommonResult<>(ResultCode.NOT_REQUEST_ERROR, e.getMessage());
     }
 
-
-    /**
-     * 404异常处理器
-     *
-     * @param e 忽略参数异常
-     * @return CommonResult
-     */
-    @ExceptionHandler(NoHandlerFoundException.class)
-    public CommonResult<String> notHandlerFoundExceptionHandler(NoHandlerFoundException e) {
-        return new CommonResult<>(ResultCode.NOTFOUNDERROR,"没有找到");
-    }
 
 }
