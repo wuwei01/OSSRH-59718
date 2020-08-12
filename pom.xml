@@ -11,7 +11,7 @@
     </properties>
     <groupId>io.github.wuwei01</groupId>
     <artifactId>wwei-common</artifactId>
-    <version>1.0</version>
+    <version>1.1</version>
     <name>wwei-common</name>
     <description>统一异常处理,统一返回值定义</description>
     <url>https://github.com/wuwei01/OSSRH-59718</url>
