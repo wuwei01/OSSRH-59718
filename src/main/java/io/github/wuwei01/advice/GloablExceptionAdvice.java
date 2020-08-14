@@ -1,4 +1,4 @@
-package io.github.wuwei01.config;
+package io.github.wuwei01.advice;
 
 
 import io.github.wuwei01.enums.ResultCode;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
+import org.springframework.web.servlet.NoHandlerFoundException;
 
 /**
  * ClassName GloablExceptionAdvice
@@ -25,7 +25,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
  **/
 @Slf4j
 @RestControllerAdvice
-public class GloablExceptionAdvice extends ResponseEntityExceptionHandler {
+public class GloablExceptionAdvice {
 
     /**
      * 参数校验失败处理器
@@ -84,6 +84,18 @@ public class GloablExceptionAdvice extends ResponseEntityExceptionHandler {
     @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
     public CommonResult<String> notSupportedExceptionHandler(HttpRequestMethodNotSupportedException e) {
         return new CommonResult<>(ResultCode.NOT_REQUEST_ERROR, e.getMessage());
+    }
+
+    /**
+     * 404方法错误异常处理器
+     *
+     * @param e 忽略参数异常
+     * @return CommonResult
+     */
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ExceptionHandler(NoHandlerFoundException.class)
+    public CommonResult<String> notHandlerFoundExceptionHandler(NoHandlerFoundException e) {
+        return new CommonResult<>(ResultCode.NOT_FOUND_ERROR, e.getMessage());
     }
 
 

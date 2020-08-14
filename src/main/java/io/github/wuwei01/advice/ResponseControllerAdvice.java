@@ -1,4 +1,4 @@
-package io.github.wuwei01.config;
+package io.github.wuwei01.advice;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -19,7 +19,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
  * Date 2020/8/5 14:21
  * Version 1.0
  **/
-@RestControllerAdvice(basePackages = "${rep.repBasePackages}")
+@RestControllerAdvice
 public class ResponseControllerAdvice implements ResponseBodyAdvice {
 
     @Override
