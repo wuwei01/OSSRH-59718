@@ -5,7 +5,7 @@ import lombok.Getter;
 /**
  * ClassName ResultCode
  * Description 常用定义错误Code
- * Author Wuwei
+ * @Author Wuwei
  * Date 2020/8/5 14:09
  * Version 1.0
  **/
